@@ -1,0 +1,257 @@
+:root {
+
+    /*colors*/
+    --primary-red:hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --blue:hsl(248, 32%, 49%);
+    --dark-blue:hsl(249, 10%, 26%) ;
+    --grayish-blue:hsl(246, 25%, 77%);
+    --just-white: white;
+
+    /*fonts*/
+    --poppins: 'Poppins', sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+
+    font-family: var(--poppins);
+    font-size: 16px;
+    min-width: 375px;
+    background-color: var(--primary-red);
+}
+
+main {
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('./images/bg-intro-mobile.png');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    max-width: 600px;
+    margin-top: 60px;
+    text-align: center;
+    color: var(--just-white);
+}
+
+.text-container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.text-container p {
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+.form-container {
+    max-width: 600px;
+    min-width: 335px;
+    margin: 60px 0;
+}
+
+.form-container .form-container__promo {
+    width: 100%;
+    height: 90px;
+    background-color: var(--blue);
+    color: var(--just-white);
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.4rem;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 8px 1px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 8px 1px 0px rgba(0,0,0,0.2);
+}
+
+.form-container .form-container__promo strong {
+    font-weight: 700;
+}
+
+.form {
+    background-color: var(--just-white);
+    width:100%;
+    padding:20px;
+    border-radius: 10px;
+}
+
+.form input, .form .form__submit {
+    width:100%;
+    border-radius: 5px;
+    font-family: var(--poppins);
+    font-weight: 600;
+    height: 60px;
+}
+
+.form input {
+    border: 2px solid hsl(249, 10%, 26%, 0.1);
+    outline: none;
+    padding-left: 15px;
+    color: var(--dark-blue);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group__icon {
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-image: url('./images/icon-error.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 17.5px;
+}
+
+.form-container .form input:focus {
+    border: 2px solid hsl(248, 32%, 49%, 0.8)
+}
+
+.form .form__submit {
+    height: 60px;
+    width: 100%;
+    border: none;
+    color: var(--just-white);
+    background-color: var(--primary-green);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.form .form__submit:hover {
+    transition: all ease-in 100ms;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form .form__submit:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form__terms {
+    color: var(--grayish-blue);
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.form__terms a {
+    color:var(--primary-red);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form .input-error {
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+}
+
+.error-message {
+    display: none;
+    color: var(--primary-red);
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-top: 4px;
+    text-align: right;
+}
+
+
+footer {
+    width: 100%;
+    position: inherit;
+    color: var(--dark-blue);
+    padding: 10px;
+}
+
+.attribution { font-size: 12px; text-align: center; }
+.attribution a { color: var(--blue); font-weight: 500;}
+
+@media only screen and (min-width:600px){
+    .text-container h1 {
+        font-size: 2.6rem;
+    }
+
+    .form-container .form-container__promo {
+        height: 80px;
+    }
+
+    .form-container__promo p {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width:1024px){
+
+    main {
+        background-image: url('./images/bg-intro-desktop.png');
+    }
+
+    .hero {
+        flex-direction: row;
+    }
+
+    .text-container {
+        text-align: left;
+        margin-right: 30px;
+        margin-top: 40px;
+    }
+    .text-container h1 {
+        font-size: 3.4rem;
+        line-height: 4rem;
+    }
+
+    .form-container {
+        margin-left: 30px;
+        margin-top: 80px;
+    }
+
+    .form {
+        padding: 30px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+
+
