@@ -3,7 +3,6 @@ const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const inputArr = [fname, lname, email, password];
 
 /*__functions__*/
 
@@ -44,6 +43,7 @@ function checkEmail(input) {
             showSuccess(input);
         } else {
             showError(input, 'Email is not valid');
+            input.value = "email@example/com";
         }
     }
   }
